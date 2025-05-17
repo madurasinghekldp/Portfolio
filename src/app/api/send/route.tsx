@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
 
     const { data, error } = await resend.emails.send({
       from: email,
-      to: [toEmail],
+      to: [toEmail as string],
       subject,
       html,
     });
