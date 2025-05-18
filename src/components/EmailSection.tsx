@@ -13,8 +13,8 @@ const EmailSection = () => {
 
   return (
     <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
-        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent
-         rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-600 to-transparent
+         rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
@@ -34,7 +34,7 @@ const EmailSection = () => {
           </Link>
         </div>
       </div>
-      <div>
+      <div className="z-10">
         {emailSubmitted ? (
           <p className="text-green-500 text-sm mt-2">
             Email sent successfully!
@@ -48,14 +48,16 @@ const EmailSection = () => {
               >
                 Your email
               </label>
-              <input
-                name="email"
-                type="email"
-                id="email"
-                required
-                className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="jacob@google.com"
-              />
+              <div className="rounded-xl bg-gradient-to-r  from-indigo-600 to-emerald-600 via-sky-600 p-0.5">
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  required
+                  className="bg-[#18191E]  placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+                  placeholder="jacob@google.com"
+                />
+              </div>
             </div>
             <div className="mb-6">
               <label
@@ -64,7 +66,8 @@ const EmailSection = () => {
               >
                 Subject
               </label>
-              <input
+              <div className="rounded-xl bg-gradient-to-r  from-indigo-600 to-emerald-600 via-sky-600 p-0.5">
+                <input
                 name="subject"
                 type="text"
                 id="subject"
@@ -72,6 +75,7 @@ const EmailSection = () => {
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Just saying hi"
               />
+              </div>
             </div>
             <div className="mb-6">
               <label
@@ -80,16 +84,18 @@ const EmailSection = () => {
               >
                 Message
               </label>
-              <textarea
+              <div className="rounded-xl bg-gradient-to-r  from-indigo-600 to-emerald-600 via-sky-600 p-0.5">
+                <textarea
                 name="message"
                 id="message"
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
                 placeholder="Let's talk about..."
               />
+              </div>
             </div>
             <button
               type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              className="bg-sky-600 hover:bg-emerald-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
             >
               Send Message
             </button>
