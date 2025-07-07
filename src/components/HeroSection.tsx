@@ -10,7 +10,7 @@ export const HeroSection = () => {
         <div className='grid grid-cols-1 sm:grid-cols-12'>
             <div className='col-span-7 place-self-center text-center sm:text-left'>
                 <h1 className='text-white text-4xl sm:text-5xl lg:text-6xl mb-4 font-extrabold'>
-                    <span className='text-transparent bg-clip-text bg-gradient-to-br  from-indigo-600 to-emerald-600 via-sky-600'>Hello, I'm {" "}</span>
+                    <span className='text-transparent bg-clip-text bg-gradient-to-br  from-indigo-600 to-emerald-600 via-sky-600'>Hello, I&apos;m {" "}</span>
                     <TypeAnimation
                         sequence={[
                             // Same substring at the start will only be typed out once, initially

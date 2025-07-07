@@ -27,7 +27,12 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json(data);
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message || 'Unknown error' }, { status: 500 });
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      return NextResponse.json({ error: error.toString() }, { status: 500 });
+    }
+
+    // fallback if error is not an instance of Error
+    return NextResponse.json({ error: 'Unknown error' }, { status: 500 });
   }
 }

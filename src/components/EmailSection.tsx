@@ -7,13 +7,14 @@ const EmailSection = () => {
 
     const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-    const handleSubmit = async (e:any) => {
+    const handleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
       e.preventDefault();
+      const target = e.target as HTMLFormElement;
       const data = {
-        email: e.target.email.value,
-        subject: e.target.subject.value,
-        message: e.target.message.value
-      }
+        email: (target.email as HTMLInputElement).value,
+        subject: (target.subject as HTMLInputElement).value,
+        message: (target.message as HTMLInputElement).value,
+      };
       const jsonData = JSON.stringify(data);
       const endpoint = '/api/send';
       const response = await fetch(endpoint, {
@@ -25,14 +26,14 @@ const EmailSection = () => {
       });
       if (response.ok) {
         setEmailSubmitted(true);
-        e.target.reset();
+        target.reset();
       } else {
         console.error('Error sending email');
       }
     }
 
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
+    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative' id="contact">
         <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-600 to-transparent
          rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-y-1/2"></div>
         <div className="z-10">
