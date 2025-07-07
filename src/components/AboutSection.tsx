@@ -10,10 +10,12 @@ const TAB_CONTENT = [
         content: (
             <ul className='list-disc pl-2'>
                 <li className='text-base lg:text-lg'>HTML</li>
-                <li className='text-base lg:text-lg'>CSS</li>
+                <li className='text-base lg:text-lg'>Java</li>
                 <li className='text-base lg:text-lg'>JavaScript</li>
                 <li className='text-base lg:text-lg'>React</li>
-                <li className='text-base lg:text-lg'>Node.js</li>
+                <li className='text-base lg:text-lg'>Next.js</li>
+                <li className='text-base lg:text-lg'>SpringBoot</li>
+                <li className='text-base lg:text-lg'>Angular</li>
             </ul>
         )
     },
@@ -22,8 +24,8 @@ const TAB_CONTENT = [
         id: "education",
         content: (
             <ul className='list-disc pl-2'>
-                <li className='text-base lg:text-lg'>Bachelor of Science in Computer Science</li>
-                <li className='text-base lg:text-lg'>Master of Science in Software Engineering</li>
+                <li className='text-base lg:text-lg'>BSc &#40;hons&#41; in Computer Science at University of Kelaniya</li>
+                <li className='text-base lg:text-lg'>Advanced Level at Ananda College Colombo 10.</li>
             </ul>
         )
     },
@@ -32,8 +34,9 @@ const TAB_CONTENT = [
         id: "experience",
         content: (
             <ul className='list-disc pl-2'>
-                <li className='text-base lg:text-lg'>Software Engineer at XYZ Company</li>
-                <li className='text-base lg:text-lg'>Frontend Developer at ABC Company</li>
+                <li className='text-base lg:text-lg'>Internship at Redcode solutions</li>
+                <li className='text-base lg:text-lg'>AI developer at Adventa Holdings</li>
+                <li className='text-base lg:text-lg'>Internship at Adventa Holdings</li>
             </ul>
         )
     }
