@@ -56,13 +56,13 @@ const AboutSection = () => {
                     accusamus earum assumenda incidunt fugiat nulla ipsam! Id, eaque.
                 </p>
                 <div className='flex flex-row mt-8'>
-                    <TabButton selectTab={()=>handleTabChange("skills")} active={tab=="skills"} color={"border-indigo-600"}>
+                    <TabButton id="skills" selectTab={()=>handleTabChange("skills")} active={tab=="skills"} color={"border-indigo-600"}>
                         Skills
                     </TabButton>
-                    <TabButton selectTab={()=>handleTabChange("education")} active={tab=="education"} color={"border-sky-600"}>
+                    <TabButton id="education" selectTab={()=>handleTabChange("education")} active={tab=="education"} color={"border-sky-600"}>
                         Education
                     </TabButton>
-                    <TabButton selectTab={()=>handleTabChange("experience")} active={tab=="experience"} color={"border-emerald-600"}>
+                    <TabButton id="experience" selectTab={handleTabChange} active={tab=="experience"} color={"border-emerald-600"}>
                         Experience
                     </TabButton>
                 </div>
