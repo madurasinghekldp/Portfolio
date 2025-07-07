@@ -7,8 +7,28 @@ const EmailSection = () => {
 
     const [emailSubmitted, setEmailSubmitted] = useState(false);
 
-    const handleSubmit = () => {
-
+    const handleSubmit = async (e:any) => {
+      e.preventDefault();
+      const data = {
+        email: e.target.email.value,
+        subject: e.target.subject.value,
+        message: e.target.message.value
+      }
+      const jsonData = JSON.stringify(data);
+      const endpoint = '/api/send';
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: jsonData,
+      });
+      if (response.ok) {
+        setEmailSubmitted(true);
+        e.target.reset();
+      } else {
+        console.error('Error sending email');
+      }
     }
 
   return (
@@ -36,7 +56,7 @@ const EmailSection = () => {
       </div>
       <div className="z-10">
         {emailSubmitted ? (
-          <p className="text-green-500 text-sm mt-2">
+          <p className="text-green-500 text-sm mt-2 text-center">
             Email sent successfully!
           </p>
         ) : (
@@ -55,7 +75,7 @@ const EmailSection = () => {
                   id="email"
                   required
                   className="bg-[#18191E]  placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                  placeholder="jacob@google.com"
+                  placeholder="your-email@example.com"
                 />
               </div>
             </div>

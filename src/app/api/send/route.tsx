@@ -5,17 +5,18 @@ import { render } from '@react-email/render';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = process.env.TO_EMAIL;
+const fromEmail = "My-Portfolio <onboarding@resend.dev>";
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { email, subject, message } = body;
+    const { email, subject, message } = body; 
 
-    const html = await render(<EmailTemplate subject={subject} message={message} />);
+    const html = await render(<EmailTemplate message={message} email={email}/>);
 
 
     const { data, error } = await resend.emails.send({
-      from: email,
+      from: fromEmail,
       to: [toEmail as string],
       subject,
       html,

@@ -1,10 +1,9 @@
 // EmailTemplate.tsx
-export function EmailTemplate({ subject, message }: { subject: string; message: string }) {
+export function EmailTemplate({ message, email }: { message: string; email?: string }) {
   return (
     <>
-      <h1>{subject}</h1>
-      <p>Thank you for contacting us!</p>
       <p>{message}</p>
+      <p>Contact back through email: {email}</p>
     </>
   );
 }
