@@ -55,7 +55,7 @@ const AboutSection = () => {
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
                 <p className='text-base lg:text-lg text-justify'>
-                    I&#146;m a dedicated developer with a BSc &#40;Hons&#41; in Computer Science from the University of 
+                    I am a dedicated developer with a BSc &#40;Hons&#41; in Computer Science from the University of 
                     Kelaniya and industry experience across multiple domains. I completed internships at 
                     Redcode Solution and Adventa Holding, where I contributed to real-world solutions in 
                     e-commerce, fishing industry management, and AI chatbots. Skilled in JavaScript, Python, 
