@@ -25,11 +25,11 @@ export const HeroSection = () => {
                         repeat={Infinity}
                         /></h1>
                 <p className='text-neutral-400 text-base text-justify sm:text-lg lg:text-xl mb-4'>
-                    Hi, I'm Dulan Madurasinghe, a passionate software engineer focused on building scalable and 
+                    Hi, I&#146;m Dulan Madurasinghe, a passionate software engineer focused on building scalable and 
                     user-friendly web applications. With hands-on experience in Next.js, Angular, and Spring Boot, 
                     I specialize in both frontend and backend development. From developing e-commerce platforms to 
                     AI-powered systems, I bring creativity, clean code, and strong problem-solving to every project.
-                     Let's create something impactful together.
+                     Let&#146;s create something impactful together.
                 </p>
                 <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br
                  from-indigo-600 to-emerald-600 via-sky-600 hover:bg-slate-200 text-white'>Hire Me</button>
