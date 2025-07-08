@@ -6,21 +6,21 @@ import ProjectTag from './ProjectTag';
 const projectsData = [
     {
         id:1,
-        title: "E-commerce Website",
-        description: "Description for project 1",
-        imgUrl: "/images/projects/e-commerce.png",
+        title: "Employee Management App",
+        description: "Company can register here and can maintain employee details. Admin of the company can check performance of the employee. Developed using Angular and Spring Boot.",
+        imgUrl: "/images/projects/Employee-management-app.png",
         tag: ["All","Web"],
-        gitUrl:"/",
-        previewUrl:"/"
+        gitUrl:"https://github.com/madurasinghekldp/Employee-System-Frontend",
+        previewUrl:"https://empgo-ems.web.app"
     },
     {
         id:2,
-        title: "Fishing App",
-        description: "Description for project 2",
-        imgUrl: "/images/projects/fishing.png",
-        tag: ["All","Mobile"],
-        gitUrl:"/",
-        previewUrl:"/"
+        title: "Jewelry App",
+        description: "A jewelry selling platform for local users. User can register and make orders of jewelries and gems. On going project using Next.js and Nest.js.",
+        imgUrl: "/images/projects/jewelry-app.png",
+        tag: ["All","Web"],
+        gitUrl:"https://github.com/madurasinghekldp/jewelry-front",
+        previewUrl:"https://jewelrystone.vercel.app"
     }
 ]
 
