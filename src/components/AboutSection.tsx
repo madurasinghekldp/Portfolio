@@ -54,9 +54,14 @@ const AboutSection = () => {
             <Image src="/images/about-section-image.png" width={500} height={500} alt="about-image"/>
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
-                <p className='text-base lg:text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, fuga ea 
-                    soluta reiciendis amet alias, sint repudiandae, suscipit eos minima similique 
-                    accusamus earum assumenda incidunt fugiat nulla ipsam! Id, eaque.
+                <p className='text-base lg:text-lg text-justify'>
+                    I'm a dedicated developer with a BSc &#40;Hons&#41; in Computer Science from the University of 
+                    Kelaniya and industry experience across multiple domains. I completed internships at 
+                    Redcode Solution and Adventa Holding, where I contributed to real-world solutions in 
+                    e-commerce, fishing industry management, and AI chatbots. Skilled in JavaScript, Python, 
+                    TypeScript, and cloud-ready stacks, I love diving into new technologies and continuously 
+                    improving my craft. Whether working in Agile teams or leading frontend efforts, I bring 
+                    commitment, adaptability, and a collaborative spirit to every opportunity.
                 </p>
                 <div className='flex flex-row mt-8'>
                     <TabButton id="skills" selectTab={()=>handleTabChange("skills")} active={tab=="skills"} color={"border-indigo-600"}>
